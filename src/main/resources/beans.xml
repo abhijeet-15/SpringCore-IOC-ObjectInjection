@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="englishCheatReference" class="com.abhijeetsingh.betterWay.EnglishCheat" />
+
+    <bean id="betterStudent" class="com.abhijeetsingh.betterWay.BetterStudent">
+<!--        <property name="englishCheat" ref="englishCheatReference" />-->
+        <constructor-arg name="englishCheat" ref="englishCheatReference" />
+    </bean>
+
+</beans>
